@@ -1,5 +1,87 @@
-<html>
-  <h1>Charinda Sonthidee</h1>
-  <hr />
-  <img src="theedin.jpg" style="width: 350" />
-</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP - Card Profile</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <div class="avatar">
+            <div class="user-online-indicator"></div>
+            <img
+              src="bqm.jpg"
+              alt="user-image"
+            />
+          </div>
+          <div class="profile-name"><h1>Charinda Sonthidee</h1></div>
+          <div class="profile-role">bsm</div>
+        </div>
+
+        <div class="card-footer">
+          <div class="social-buttons">
+            <button>
+              <a href="https://www.instagram.com/bbamcst/"><i class="fab fa-instagram"></i></a>
+            </button>
+
+            <button>
+              <a href="https://github.com/Bqmzz"><i class="fab fa-github"></i></a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+  <script>
+      let tl = gsap.timeline();
+
+console.log("New");
+
+tl.from(".card", {
+  stagger: 0.2,
+  opacity: 0,
+  x: -20,
+});
+
+tl.from(".avatar img", {
+  stagger: 0.2,
+  opacity: 0,
+  y: 20,
+});
+
+tl.from(".user-online-indicator",{
+    stagger: 0.2,
+    opacity: 0,
+    y: 20,
+})
+tl.from(".profile-name",{
+    stagger: 0.2,
+    opacity: 0,
+    y: 20,
+})
+tl.from(".profile-role",{
+    stagger: 0.2,
+    opacity: 0,
+    y: 20,
+})
+
+tl.from(".social-buttons",{
+    stagger: 0.2,
+    opacity: 0,
+})
+
+  </script>
+  
+  </html>
